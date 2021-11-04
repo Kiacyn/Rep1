@@ -2,8 +2,10 @@
 
 funkcjonalnośći:
 
--stwórz: notatkę, listę, plan dnia,
-- nadaj priorytety,
-- -zmień kolor,
+stwórz: 
+-notatkę, 
+-listę, 
+-plan dnia,
+
 - odchacz wykonane zadanie,
 - zapisz/wczytaj.
