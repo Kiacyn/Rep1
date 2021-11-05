@@ -9,17 +9,23 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    lista.cpp \
     main.cpp \
     mainwindow.cpp \
-    notatka.cpp
+    notatka.cpp \
+    plan.cpp
 
 HEADERS += \
+    lista.h \
     mainwindow.h \
-    notatka.h
+    notatka.h \
+    plan.h
 
 FORMS += \
+    lista.ui \
     mainwindow.ui \
-    notatka.ui
+    notatka.ui \
+    plan.ui
 
 TRANSLATIONS += \
     notes2_pl_PL.ts

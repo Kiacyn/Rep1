@@ -11,21 +11,26 @@ Notatka::Notatka(QWidget *parent) :
 Notatka::~Notatka()
 {
     delete ui;
+
 }
 
-void Notatka::on_buttonBox_accepted()
+QString Notatka::on_buttonBox_accepted()
 {
-    QString fileName = QFileDialog::getSaveFileName(this, "Zapisz jako:");
-    QFile file(fileName);
+
+    QString noteName = QFileDialog::getSaveFileName(this);
+    QFile file(noteName);
     if(!file.open(QFile::WriteOnly | QFile::Text))
     {
         QMessageBox::warning(this, "Uwaga","Nie mozna zapisac:" + file.errorString());
-        return;
+        return 0;
     }
-    currentFile = fileName;
+    //currentFile = noteName;
+
     QTextStream out(&file);
-    QString text = ui ->textEdit -> toPlainText();
+    QString text = ui->textEdit->toPlainText();
     out << text;
     file.close();
-}
+    return noteName;
 
+
+}

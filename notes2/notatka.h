@@ -14,18 +14,21 @@ class Notatka;
 class Notatka : public QDialog
 {
     Q_OBJECT
-    QString fileName;
+    QString noteName;
+    //QString currentFile;
 
 public:
     explicit Notatka(QWidget *parent = nullptr);
+    //QString currentFile;
     ~Notatka();
 
 private slots:
-    void on_buttonBox_accepted();
+   QString on_buttonBox_accepted();
 
 private:
     Ui::Notatka *ui;
-    QString currentFile = "";
+
+    friend class MainWindow;
 };
 
 #endif // NOTATKA_H
